@@ -18,7 +18,7 @@ public class ChiTietNguoiDung implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Collections.singleton(new SimpleGrantedAuthority(taiKhoan.getRole().get(0)));
+        return Collections.singleton(new SimpleGrantedAuthority(taiKhoan.getRole().get(0).toString()));
     }
 
     @Override

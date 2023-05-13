@@ -1,6 +1,6 @@
 package com.example.bookecom.utils;
 
 public enum EnumRole {
-    ADMIN,
-    USER
+    ROLE_ADMIN,
+    ROLE_USER
 }

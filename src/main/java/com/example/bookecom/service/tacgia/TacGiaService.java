@@ -7,4 +7,6 @@ import java.security.Principal;
 
 public interface TacGiaService {
     TacGia create(TacGiaDTO tacGiaDTO, Principal principal);
+    TacGia update(String id, TacGiaDTO tacGiaDTO, Principal principal);
+    TacGia delete(String id);
 }

@@ -8,10 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.security.Principal;
 
 @RestController
@@ -22,10 +21,22 @@ public class TacGiaController {
     public TacGiaController(TacGiaService tacGiaService){
         this.tacGiaService = tacGiaService;
     }
-//    @SecurityRequirement(name = "Bearer Authentication")
-//    @PreAuthorize(value = "hasRole('ADMIN')")
+    @SecurityRequirement(name = "Bearer Authentication")
+    @PreAuthorize(value = "hasRole('ROLE_ADMIN')")
     @PostMapping
-    public ResponseEntity<TacGia> create(TacGiaDTO tacGiaDTO, Principal principal){
+    public ResponseEntity<TacGia> create(@Valid @RequestBody TacGiaDTO tacGiaDTO, Principal principal){
         return new ResponseEntity<>(tacGiaService.create(tacGiaDTO,principal), HttpStatus.OK);
+    }
+    @SecurityRequirement(name = "Bearer Authentication")
+    @PreAuthorize(value = "hasRole('ROLE_ADMIN')")
+    @PutMapping("/{id}")
+    public ResponseEntity<TacGia> update(@PathVariable String id, @Valid @RequestBody TacGiaDTO tacGiaDTO, Principal principal){
+        return new ResponseEntity<>(tacGiaService.update(id,tacGiaDTO,principal),HttpStatus.OK);
+    }
+    @SecurityRequirement(name = "Bearer Authentication")
+    @PreAuthorize(value = "hasRole('ROLE_ADMIN')")
+    @DeleteMapping("/{id}")
+    public ResponseEntity<TacGia> delete(@PathVariable String id){
+        return new ResponseEntity<>(tacGiaService.delete(id),HttpStatus.OK);
     }
 }

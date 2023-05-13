@@ -8,5 +8,6 @@ import java.security.Principal;
 
 public interface TaiKhoanService {
     TaiKhoan creat(TaiKhoanDTO taiKhoanDTO, Principal principal);
-
+    TaiKhoan update(String id, TaiKhoanDTO taiKhoanDTO, Principal principal);
+    TaiKhoan delete(String id);
 }
