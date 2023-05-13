@@ -21,9 +21,9 @@ public class BookEcomApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-//        if(taiKhoanRepository.count()==0){
-//            TaiKhoan taiKhoan = new TaiKhoan("kiet", "Thu duc", "0934529859","kiet13@gmail.com","132465", Arrays.asList(EnumRole.ADMIN.name()));
-//            taiKhoanRepository.save(taiKhoan);
-//        }
+        if(taiKhoanRepository.count()==0){
+            TaiKhoan taiKhoan = new TaiKhoan("kiet", "Thu duc", "0934529859","kiet13@gmail.com","132465", Arrays.asList(EnumRole.ADMIN.name()));
+            taiKhoanRepository.save(taiKhoan);
+        }
     }
 }

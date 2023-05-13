@@ -26,6 +26,7 @@ public class TaiKhoan {
     @JsonIgnore
     private String password;
     private List<String> role =new ArrayList<>();
+    private boolean trangThai = true;
     public TaiKhoan(String ten, String diaChi, String soDienThoai, String email, String password, List<String> roles){
         this.ten = ten;
         this.diaChi = diaChi;
