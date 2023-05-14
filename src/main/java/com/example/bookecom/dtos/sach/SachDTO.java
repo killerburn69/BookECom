@@ -21,6 +21,6 @@ public class SachDTO {
     private Float gia;
     private String moTa;
     private List<ChuDe> chuDes = new ArrayList<>();
-    private TacGia tacGia = new TacGia();
-    private NhaXuatBan nhaXuatBan = new NhaXuatBan();
+    private String tacGia;
+    private String nhaXuatBan;
 }

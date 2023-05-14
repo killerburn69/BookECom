@@ -16,4 +16,5 @@ import java.util.List;
 public class DonHangDTO {
     private String maDonHang;
     private List<SanPhamDuocChon> sanPhamDuocChonList = new ArrayList<>();
+    private String taiKhoan;
 }

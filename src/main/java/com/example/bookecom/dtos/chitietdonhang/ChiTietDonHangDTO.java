@@ -17,7 +17,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ChiTietDonHangDTO {
-    private List<DonHang> donHangs = new ArrayList<>();
+    private DonHang donHangs = new DonHang();
     private Date ngayGiaoHang;
     private EnumStatus trangThai;
 }

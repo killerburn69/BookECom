@@ -12,10 +12,6 @@ import org.springframework.data.annotation.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SanPhamDuocChon {
-    @Id
-    private String id;
     private String maSach;
     private Integer soLuong;
-    private Float giaTien;
-    private TaiKhoan taiKhoan;
 }

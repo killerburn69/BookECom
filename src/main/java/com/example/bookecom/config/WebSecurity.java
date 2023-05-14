@@ -54,7 +54,12 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
                         "/rest/v1/user").permitAll()
                 .antMatchers("/rest/v1/user/**",
                         "/rest/v1/tacgia/**",
+                        "/rest/v1/chitietdonhang/**",
+                        "/rest/v1/sach",
+                        "/rest/v1/sach/**",
                         "/rest/v1/tacgia",
+                        "/rest/v1/donhang",
+                        "/rest/v1/donhang/**",
                         "/rest/v1/nhaxuatban",
                         "/rest/v1/nhaxuatban/**").authenticated();
         http.addFilterBefore(getJwtAuthFilter(),

@@ -21,4 +21,5 @@ public class DonHang {
     private String id;
     private String maDonHang;
     private List<SanPhamDuocChon> sanPhamDuocChonList = new ArrayList<>();
+    private String taiKhoan;
 }

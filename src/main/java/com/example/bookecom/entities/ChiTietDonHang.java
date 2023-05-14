@@ -21,7 +21,7 @@ import java.util.List;
 public class ChiTietDonHang {
     @Id
     private String id;
-    private List<DonHang> donHangs = new ArrayList<>();
+    private DonHang donHangs = new DonHang();
     private Date ngayGiaoHang;
     private EnumStatus trangThai;
 }
